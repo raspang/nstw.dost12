@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_Letter" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bd37ae46-50be-4714-ba71-4ecafc0c7bb2">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="dost" class="java.lang.Object"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="number" class="java.lang.String"/>
+	<field name="lastName" class="java.lang.String"/>
+	<field name="middleName" class="java.lang.String"/>
+	<field name="firstName" class="java.lang.String"/>
+	<field name="office" class="java.lang.String"/>
+	<field name="designation" class="java.lang.String"/>
+	<field name="contactNo" class="java.lang.String"/>
+	<field name="emailAdd" class="java.lang.String"/>
+	<field name="age" class="java.lang.String"/>
+	<field name="sex" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="business" class="java.lang.String"/>
+	<field name="id" class="java.lang.String"/>
+	<background>
+		<band height="17" splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="115" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<staticText>
+				<reportElement x="-5" y="83" width="570" height="29" uuid="60caecb8-8106-4984-93ea-512314cc26db"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Century" size="18"/>
+				</textElement>
+				<text><![CDATA[REGISTRATION FORM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="107" y="0" width="375" height="30" uuid="1cc5ec5e-5dba-4072-ab1e-a35b16a4db0a"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Century" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2019 NATIONAL SCIENCE AND TECHNOLOGY WEEK-REGIONAL CELEBRATION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="107" y="25" width="375" height="45" uuid="ca6bb5e7-6a39-4c64-bfc1-1c7a0282e41e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century" size="10"/>
+				</textElement>
+				<text><![CDATA[December 3-5, 2019
+SM City Gensan
+General Santos City]]></text>
+			</staticText>
+			<image>
+				<reportElement x="37" y="10" width="60" height="66" uuid="113438a2-52a0-4e37-b919-8db2c4e029b4"/>
+				<imageExpression><![CDATA[$P{dost}]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="637" splitType="Stretch">
+			<staticText>
+				<reportElement x="52" y="60" width="100" height="30" uuid="f6e6ede8-7b6d-4eb4-b18e-d8e13ca0fe38"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[FIRSTNAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="52" y="90" width="100" height="30" uuid="71de9cfe-6159-4625-8f04-b5dca4ed0ef7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[MIDDLE NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="52" y="120" width="100" height="30" uuid="0a3a741d-5a68-42a1-9c0b-1cf438620587"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[COMPANY/OFFICE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="52" y="150" width="100" height="30" uuid="497f7d92-7ef9-45a8-9275-28aa2b3c72f1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[DESIGNATION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="52" y="180" width="100" height="30" uuid="c3b902bb-f25e-4a25-b806-a3e512e39603"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[CONTACT NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="52" y="210" width="100" height="30" uuid="cd070ae0-31ea-4a58-8387-a9bc8f273b37"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[EMAIL-ADD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="52" y="240" width="100" height="30" uuid="4bdf6f88-c2f2-4f97-b8b9-eb7799e4de53"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[AGE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="52" y="270" width="100" height="30" uuid="22021030-54c7-4203-906f-9836bc37d7a7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[SEX]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="52" y="300" width="100" height="30" uuid="652ca122-4098-4e7b-b430-5210bafcab4c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[STATUS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="52" y="330" width="100" height="30" uuid="88c7485d-255e-4e1e-adc0-4906a9bde4b3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[BUSINESS LINE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="52" y="30" width="100" height="30" uuid="bc3eccfa-9ae6-4f78-a9bb-c3af939cee12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[SURNAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="30" width="17" height="30" uuid="59c7333e-eb05-4985-a845-62c221912e9f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="60" width="17" height="30" uuid="486233ee-4aac-4db9-8557-415d23dd8d14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="90" width="17" height="30" uuid="07049f4f-e10e-4a06-b20c-330e84e60ad0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="120" width="17" height="30" uuid="b6fa9e32-5184-4bf1-8143-f37487bcabf7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="150" width="17" height="30" uuid="c5dd1fe6-fc66-48b3-b0f7-b6ddf7d94546"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="180" width="17" height="30" uuid="ac56b2bd-5cce-4d75-adc1-407c6f100e82"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="210" width="17" height="30" uuid="aa4ac930-ff3f-42db-bf67-5d65774874b3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="240" width="17" height="30" uuid="d62ea39b-5eea-4fb9-a77a-eafd359cf59d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="270" width="17" height="30" uuid="045798dc-cdec-4129-9750-2c852f13ae34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="300" width="17" height="30" uuid="d2f9c901-00c9-4b93-bae1-1f4dd9e06ec3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="330" width="17" height="30" uuid="6d28e950-eeef-4754-a02b-be40595699b8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="374" y="403" width="155" height="1" uuid="c2af31d5-6f9d-4c9b-ae18-079424ff5c70"/>
+			</line>
+			<staticText>
+				<reportElement x="403" y="403" width="100" height="18" uuid="d00152ef-545b-4ce4-831e-ef2702852900"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[Name & Signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="440" width="383" height="35" uuid="8eac04e7-b422-4fc2-a43a-1b2097988b78"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Century" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2019 NATIONAL SCIENCE AND TECHNOLOGY WEEK-REGIONAL CELEBRATION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="123" y="473" width="380" height="45" uuid="b32f55d8-8702-4295-859c-828936c44180"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century" size="10"/>
+				</textElement>
+				<text><![CDATA[December 3-5, 2019
+SM City Gensan
+General Santos City]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="518" width="466" height="28" uuid="3d5a98cf-5fc4-42ec-8698-5f816843d49b"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Century" size="18"/>
+				</textElement>
+				<text><![CDATA[REGISTRATION FORM]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-10" y="434" width="573" height="1" uuid="0ce4e791-bd2f-48b7-b13b-736cb2508a54"/>
+			</line>
+			<componentElement>
+				<reportElement x="179" y="549" width="199" height="30" uuid="9438227a-19bd-4bd6-9d22-06493c2d3f2e"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="false" checksumRequired="false">
+					<jr:codeExpression><![CDATA[$F{number}]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<textField>
+				<reportElement x="73" y="10" width="27" height="18" uuid="66e7c2c5-d6dd-4f8d-8f2f-dd35896531c3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="40" y="453" width="60" height="66" uuid="9873a67d-1a2f-45f9-a8cf-bf7633e1aca7"/>
+				<imageExpression><![CDATA[$P{dost}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="20" y="603" width="520" height="27" uuid="13d37f07-d363-446c-b59f-d74a573dbad5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REMINDER: PLS. KEEP THIS STUB FOR REGISTRATION from December 3-5, 2019 (PAKITAGO PO ANG STUB NA ITO PARA PO SA REGISTRATION SIMULA DECEMBER 3-5, 2019)]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="169" y="30" width="315" height="29" uuid="ff1cd333-3d47-4bcf-b456-0a217bd9e130"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lastName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="169" y="61" width="315" height="29" uuid="c26dc47b-bc6b-47ef-a36e-8151d624a44d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{firstName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="169" y="90" width="315" height="29" uuid="c5684685-946a-4bb5-bc48-fb0f657a6646"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{middleName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="169" y="120" width="315" height="29" uuid="ceb3a5d5-a096-4a80-987f-e550e0d3f908"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{office}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="169" y="151" width="315" height="29" uuid="6e4ece71-c51b-4209-85c8-9951e8e11b1c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{designation}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="170" y="181" width="314" height="29" uuid="3b449132-3bff-4f8b-82dc-2b186d37d75d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{contactNo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="169" y="210" width="315" height="29" uuid="5a3a95c1-6633-4e9d-b163-bf622b91e948"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{emailAdd}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="169" y="239" width="315" height="29" uuid="7523c456-b1f7-4793-a50d-2c29b5f5e840"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{age}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="169" y="271" width="315" height="29" uuid="1b4af699-32fb-48f4-911e-48f0a4e2f3c1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sex}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="170" y="301" width="314" height="29" uuid="83f3d980-7236-4a42-bc1c-35f521e75239"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="169" y="331" width="315" height="29" uuid="a2ad58d7-d4e5-4aca-867e-fb812cdf1c3b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{business}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="173" y="2" width="190" height="35" uuid="2f5d63a8-1c0c-4761-9312-1fd87e3cf614"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="false" checksumRequired="false">
+					<jr:codeExpression><![CDATA[$F{number}]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<staticText>
+				<reportElement x="53" y="10" width="19" height="18" uuid="cfcc8d10-352f-4bd9-afa1-1eebc93533a6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[No:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="63" y="540" width="23" height="26" uuid="6a4f88be-57f4-42df-89e0-68bdc6660b2f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[No:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="86" y="540" width="37" height="26" uuid="112d409d-0426-445d-80b1-9e99c68e0ceb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="111" y="583" width="40" height="20" uuid="0317009a-42c4-47a3-aa26-dea3fe7c1325"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century"/>
+				</textElement>
+				<text><![CDATA[Name:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="281" y="583" width="100" height="20" uuid="df586259-384a-46ab-9d6d-7fe1ce963a4d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lastName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="150" y="583" width="130" height="19" uuid="d3d4eae9-5774-44b5-8f0e-24d28f74b141"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{firstName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
