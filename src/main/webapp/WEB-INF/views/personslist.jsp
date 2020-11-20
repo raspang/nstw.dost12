@@ -78,14 +78,27 @@
 			
 			<div class="card-body">
 			<sec:authorize access="hasRole('ADMIN')">
+			
+			<div style="float:right">
+				
+					<form:form action="${contextRoot}/create-date-event" method="GET">
+							Create a Date for Event: 
+							<input type="date" name="dateInString" id="dateInString"/>
+							<button type="submit">Enter</button>
+						</form:form>
+			</div><hr>
+			
+			<br>
+			
 				<div class="well">
 					<a class="btn btn-primary"
-						href="<c:url value='/newperson' />">Add New</a>
+						href="<c:url value='/newperson' />">Add Participant Form with details</a>
 					
 					<sec:authorize access="hasRole('ADMIN')">	
-					
+								
 
 						<div style="float:right">
+	
 						 <form:form action="${contextRoot}/select-event" method="GET">
 						
 							<select name="selecteventid" class="form-control" onchange="this.form.submit()">
@@ -93,12 +106,12 @@
 							   <option value="${item.id}" <c:if test="${item.enable}"> selected="selected"</c:if> >${item.dateStr}</option>
 							</c:forEach>
 						</select>
-						
+
 						 </form:form> 
 						</div>
 					
 						 <div style="float:right;padding-right:10px">
-							<h4><span class="label label-success">Event Date:</span></h4> 
+							<h4><span class="label label-success">Current Event Date:</span></h4> 
 						</div>
 						</sec:authorize>
 					
@@ -112,7 +125,7 @@
 							<th >ID no.</th>
 							<th style="width:8%">Code</th>
 							<sec:authorize access="hasRole('ADMIN')">
-							<th style="width:1%"></th>
+							<th style="width:1%">Mark as Attended</th>
 							</sec:authorize>
 							<th >Attended</th>
 							<th >Name</th>
@@ -135,7 +148,7 @@
 				<div class="well">
 
 					<button type="button" class="btn btn-warning btn-xs"
-						data-toggle="modal" data-target="#modalGenerateParticipants">Generate</button>
+						data-toggle="modal" data-target="#modalGenerateParticipants">Create Participant Form without details</button>
 				</div>
 			</sec:authorize>
 			
@@ -143,9 +156,14 @@
 				<div class="well">
 
 					<button type="button" class="btn btn-warning btn-xs"
-						data-toggle="modal" data-target="#modalPDFParticipants">PDF</button>
+						data-toggle="modal" data-target="#modalPDFParticipants">View Participants Form - PDF</button>
 				</div>
 			</sec:authorize>
+			
+				<div class="well">
+		
+						<a  class="btn btn-warning btn-xs" href="${contextRoot}/pdf-listparticipants">PDF: List of Participants today's event date</a>
+				</div>
 
 		</div>
 
@@ -169,7 +187,7 @@
 					<div class="modal-body">
 
 						<div class="form-group">
-							<label class="control-label col-md-4">No.</label>
+							<label class="control-label col-md-4">How many form?</label>
 							<div class="col-md-8 validate">
 				
 								<input type="number" name="generateNo" id="generateNo" class="form-control input-sm" />
@@ -196,7 +214,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">PDF - Registration Form</h4>
+						<h4 class="modal-title">PDF - Participants Form</h4>
 					</div>
 					<div class="modal-body">
 
@@ -209,15 +227,16 @@
        							<input type="number" name="generateEndNo" id="generateEndNo"  class="form-control input-sm" min="1"  />
 							</div>
 						</div>
+						<label>What PDF type?</label>
 						<div class="form-group">
 							<div class="form-check">
 							  <label class="form-check-label col-md-4">
-							    <input type="radio" class="form-check-input" name="isWalking" value="true" checked>Walk-in 
+							    <input type="radio" class="form-check-input" name="isWalking" value="true" checked>Walk-in Type(No details info of participants)
 							  </label>
 							</div>
 							<div class="form-check">
 							  <label class="form-check-label col-md-4">
-							    <input type="radio" class="form-check-input" name="isWalking" value="false">Invited 
+							    <input type="radio" class="form-check-input" name="isWalking" value="false">Invited (Details are already provided)
 							  </label>
 							</div>
 						</div>
@@ -233,6 +252,7 @@
 
 		</div>
 	</div>
+<div class="panel-footer"><small style="float:right;padding-right:10px">DOST12.MIS@ras.dev</small></div>
 	
 	
 

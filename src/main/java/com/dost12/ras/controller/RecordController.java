@@ -4,6 +4,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -139,20 +140,20 @@ public class RecordController {
 	@RequestMapping(value = { "/mark-participant-{id}" }, method = RequestMethod.GET)
 	public String markAttended(@PathVariable String id, ModelMap model,HttpServletRequest request) {
 
-		Participant voter = participantService.findById(Long.parseLong(id));
+		Participant participant = participantService.findById(Long.parseLong(id));
 		
 		Attended attended = new Attended();
 		Date dateEvent = getEnableEvent();
 		if(dateEvent != null)
 			attended.setDate(dateEvent);
 	
-		attended.setVoter(voter);
+		attended.setParticipant(participant);
 		
 		attendedService.saveAttended(attended);
 		
-		voter.getAttends().add(attended);
+		participant.getAttends().add(attended);
 	
-		participantService.updateVoter(voter);
+		participantService.updateVoter(participant);
 		
 		model.addAttribute("events", eventDateService.findAllEventDates());
 		model.addAttribute("loggedinuser", getPrincipal());
@@ -168,7 +169,7 @@ public class RecordController {
 		EventDate eventDate = eventDateService.findById(Integer.parseInt(selecteventid));
 		List<EventDate> eventDates = eventDateService.findAllEventDates();
 		
-		// reset nalang
+		
 		for(EventDate e : eventDateService.findAllEventDates()) {
 			e.setEnable(false);
 			eventDateService.updateEventDate(e);
@@ -180,7 +181,29 @@ public class RecordController {
 		model.addAttribute("loggedinuser", getPrincipal());
 		return "redirect:/";
 	}
+	@RequestMapping(value = { "/create-date-event" }, method = RequestMethod.GET)
+	public String createEvent(@RequestParam(name = "dateInString") String dateInString , ModelMap model, HttpServletRequest request) {
+
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 		
+		 Date date = new Date();
+		try {
+			date = formatter.parse(dateInString );
+		} catch (ParseException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		 
+		for(EventDate e : eventDateService.findAllEventDates()) {
+			e.setEnable(false);
+			eventDateService.updateEventDate(e);
+		}
+		eventDateService.saveEventDate(new EventDate(date, true));;
+
+		
+		model.addAttribute("loggedinuser", getPrincipal());
+		return "redirect:/";
+	}
 	
 
 	@RequestMapping(value = { "/generate-participantsform" }, method = RequestMethod.GET)
@@ -265,6 +288,57 @@ public class RecordController {
 		return null;
 	}
 	
+	
+	@RequestMapping(value = "/pdf-listparticipants")
+	public String listParticipants(HttpServletRequest request, HttpServletResponse response)
+			throws JRException, IOException, NamingException {
+
+		String reportFileName = "participants";
+
+		HashMap<String, Object> hmParams = new HashMap<String, Object>();
+		
+		
+		
+
+		JasperReport jasperReport = jrdao.getCompiledFile(reportFileName, request);
+
+		List<Map<String, ?>> participants = new ArrayList<Map<String, ?>>();
+		Map<String, Object> m = null;
+		
+		String dateStr = "";
+		if(getEnableEvent()!= null)
+			dateStr = formatter.format(getEnableEvent());
+		
+		hmParams.put("dateEvent", dateStr);
+		
+		for(Attended a : attendedService.findAllAttendeds(dateStr, "")) {
+		
+			m = new HashMap<String, Object>();
+			
+			Participant p = a.getParticipant();
+			m.put("lastName", a.getParticipant().getLastName().toUpperCase());
+			m.put("middleName", p.getMiddleName().toUpperCase());
+			m.put("firstName", p.getFirstName().toUpperCase());
+			m.put("company", p.getCompany());
+			m.put("designation", p.getDesignation());
+			m.put("contact", p.getContact());
+			m.put("email", p.getEmail());
+			m.put("business", p.getBusiness());
+			participants.add(m);
+		}
+		
+		
+		try {
+			jrdao.generateReportPDF(response, hmParams, participants, jasperReport);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} // For
+			// PDF
+			// report
+
+		return null;
+	}
 	
 	/**
 	 * This method will provide the medium to add a new user.

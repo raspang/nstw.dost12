@@ -26,16 +26,14 @@
 				<textElement textAlignment="Center" verticalAlignment="Bottom">
 					<font fontName="Century" size="11" isBold="true"/>
 				</textElement>
-				<text><![CDATA[2019 NATIONAL SCIENCE AND TECHNOLOGY WEEK-REGIONAL CELEBRATION]]></text>
+				<text><![CDATA[NATIONAL SCIENCE AND TECHNOLOGY WEEK-REGIONAL CELEBRATION]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="-4" y="25" width="565" height="45" uuid="ca6bb5e7-6a39-4c64-bfc1-1c7a0282e41e"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
+				<reportElement x="-4" y="30" width="565" height="40" uuid="ca6bb5e7-6a39-4c64-bfc1-1c7a0282e41e"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font fontName="Century" size="10"/>
 				</textElement>
-				<text><![CDATA[December 3-5, 2019
-SM City Gensan
-General Santos City]]></text>
+				<text><![CDATA[DOST-XII]]></text>
 			</staticText>
 			<image>
 				<reportElement x="37" y="10" width="60" height="66" uuid="113438a2-52a0-4e37-b919-8db2c4e029b4"/>
@@ -535,16 +533,14 @@ General Santos City]]></text>
 				<textElement textAlignment="Center" verticalAlignment="Bottom">
 					<font fontName="Century" size="11" isBold="true"/>
 				</textElement>
-				<text><![CDATA[2019 NATIONAL SCIENCE AND TECHNOLOGY WEEK-REGIONAL CELEBRATION]]></text>
+				<text><![CDATA[NATIONAL SCIENCE AND TECHNOLOGY WEEK-REGIONAL CELEBRATION]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="122" y="490" width="368" height="45" uuid="b32f55d8-8702-4295-859c-828936c44180"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
+				<reportElement x="122" y="500" width="368" height="35" uuid="b32f55d8-8702-4295-859c-828936c44180"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font fontName="Century" size="10"/>
 				</textElement>
-				<text><![CDATA[December 3-5, 2019
-SM City Gensan
-General Santos City]]></text>
+				<text><![CDATA[DOST-XII]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="40" y="535" width="450" height="28" uuid="3d5a98cf-5fc4-42ec-8698-5f816843d49b"/>
@@ -574,11 +570,11 @@ General Santos City]]></text>
 				<imageExpression><![CDATA[$P{dost}]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement x="7" y="610" width="559" height="26" uuid="13d37f07-d363-446c-b59f-d74a573dbad5"/>
+				<reportElement x="7" y="614" width="559" height="22" uuid="13d37f07-d363-446c-b59f-d74a573dbad5"/>
 				<textElement>
 					<font fontName="Century" size="8" isBold="true"/>
 				</textElement>
-				<text><![CDATA[REMINDER: PLS. KEEP THIS STUB FOR REGISTRATION from December 3-5, 2019 (PAKITAGO PO ANG STUB NA ITO PARA PO SA REGISTRATION SIMULA DECEMBER 3-5, 2019)]]></text>
+				<text><![CDATA[REMINDER: PLS. KEEP THIS STUB FOR REGISTRATION]]></text>
 			</staticText>
 			<componentElement>
 				<reportElement x="191" y="-1" width="183" height="40" uuid="2f5d63a8-1c0c-4761-9312-1fd87e3cf614"/>

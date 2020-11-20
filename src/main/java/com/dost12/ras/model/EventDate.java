@@ -32,6 +32,17 @@ public class EventDate implements Serializable{
     private String dateStr;
     
     private Boolean enable = false;
+    
+    
+
+	public EventDate() {
+		
+	}
+
+	public EventDate(Date date, Boolean enable) {
+		this.date = date;
+		this.enable = enable;
+	}
 
 	public Integer getId() {
 		return id;

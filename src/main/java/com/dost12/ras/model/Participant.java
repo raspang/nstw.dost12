@@ -81,7 +81,7 @@ public class Participant implements Serializable{
 	@Transient
 	private String attendsStr;
 
-    @OneToMany(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER, mappedBy = "voter", orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER, mappedBy = "participant", orphanRemoval = true)
     private List<Attended> attends = new ArrayList<>();
     
 

@@ -24,11 +24,11 @@
 	<div class="container">
 		<%@include file="authheader.jsp"%>
 
-		<div class="well lead">Participant Registration Form</div>
+		<div class="well lead">Participant Registration Form:</div>
 		<form:form method="POST" modelAttribute="voter" class="form-horizontal">
 		
 
-			
+			<small>Fields are all optional.</small>
 			<div class="container">
 			<div class="row">
 				<div class="form-group col-md-12">

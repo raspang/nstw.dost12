@@ -1,6 +1,5 @@
 package com.dost12.ras.dao;
 
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -8,8 +7,6 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.hibernate.Criteria;
-import org.hibernate.Hibernate;
-import org.hibernate.criterion.Conjunction;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.slf4j.Logger;
@@ -17,7 +14,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
 import com.dost12.ras.model.Attended;
-import com.dost12.ras.model.User;
 
 @Repository("attendedDao")
 public class AttendedDaoImpl extends AbstractDao<Long, Attended> implements AttendedDao {
@@ -94,7 +90,7 @@ public class AttendedDaoImpl extends AbstractDao<Long, Attended> implements Atte
 			criteria.add(Restrictions.lt("date", maxDate));
 
 		
-			criteria.createAlias("voter", "participant");
+			criteria.createAlias("participant", "participant");
 			
 		if (!business.equals(""))
 			criteria.add(Restrictions.eq("participant.business", business));

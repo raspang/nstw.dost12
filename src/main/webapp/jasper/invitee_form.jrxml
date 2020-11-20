@@ -37,16 +37,14 @@
 				<textElement textAlignment="Center" verticalAlignment="Bottom">
 					<font fontName="Century" size="11" isBold="true"/>
 				</textElement>
-				<text><![CDATA[2019 NATIONAL SCIENCE AND TECHNOLOGY WEEK-REGIONAL CELEBRATION]]></text>
+				<text><![CDATA[NATIONAL SCIENCE AND TECHNOLOGY WEEK-REGIONAL CELEBRATION]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="107" y="25" width="375" height="45" uuid="ca6bb5e7-6a39-4c64-bfc1-1c7a0282e41e"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
+				<reportElement x="107" y="30" width="375" height="40" uuid="ca6bb5e7-6a39-4c64-bfc1-1c7a0282e41e"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font fontName="Century" size="10"/>
 				</textElement>
-				<text><![CDATA[December 3-5, 2019
-SM City Gensan
-General Santos City]]></text>
+				<text><![CDATA[DOST-XII]]></text>
 			</staticText>
 			<image>
 				<reportElement x="37" y="10" width="60" height="66" uuid="113438a2-52a0-4e37-b919-8db2c4e029b4"/>
@@ -225,16 +223,14 @@ General Santos City]]></text>
 				<textElement textAlignment="Center" verticalAlignment="Bottom">
 					<font fontName="Century" size="11" isBold="true"/>
 				</textElement>
-				<text><![CDATA[2019 NATIONAL SCIENCE AND TECHNOLOGY WEEK-REGIONAL CELEBRATION]]></text>
+				<text><![CDATA[NATIONAL SCIENCE AND TECHNOLOGY WEEK-REGIONAL CELEBRATION]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="123" y="473" width="380" height="45" uuid="b32f55d8-8702-4295-859c-828936c44180"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
+				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font fontName="Century" size="10"/>
 				</textElement>
-				<text><![CDATA[December 3-5, 2019
-SM City Gensan
-General Santos City]]></text>
+				<text><![CDATA[DOST-XII]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="37" y="518" width="466" height="28" uuid="3d5a98cf-5fc4-42ec-8698-5f816843d49b"/>
@@ -268,7 +264,7 @@ General Santos City]]></text>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Century" size="8" isBold="true"/>
 				</textElement>
-				<text><![CDATA[REMINDER: PLS. KEEP THIS STUB FOR REGISTRATION from December 3-5, 2019 (PAKITAGO PO ANG STUB NA ITO PARA PO SA REGISTRATION SIMULA DECEMBER 3-5, 2019)]]></text>
+				<text><![CDATA[REMINDER: PLS. KEEP THIS STUB FOR REGISTRATION]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
 				<reportElement x="169" y="30" width="315" height="29" uuid="ff1cd333-3d47-4bcf-b456-0a217bd9e130"/>
